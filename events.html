@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Events - Pumpkin Cafe</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pumpkin Cafe doesn't just serve coffee, we hold sponsor events with our famous donuts too!">
+    <meta name="keywords" content="Coffee Delicious Roast">
+    <meta name="author" content="PUMPKIN CAFE LLC">
+    <meta name="twitter:image:src" content="https:// .com/img/ogimage.png">
+    <meta property="og:title" content="Pumpkin Cafe, Gotham's favorite cup of coffee" />
+    <meta property="og:description" content="Enjoy coffee and breakfast at Pumpkins Cafe" />
+    <meta property="og:image" content="https://pumpkincafegotham.com/img/ogimage.png"/>
+    <meta property="og:url" content="https://pumpkincafegotham.com" />
+    <meta property="og:type" content="website"/>
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/montserrat" type="text/css"/> 
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/gfs-didot" type="text/css"/> 
+    <link rel="stylesheet" href="css/main.min.css">
+
+  </head>
+  <body class="bg-primary">
+    
+    <!-- bgDiv -->
+    <div id="bgDiv">
+    <!-- header -->
+    <header>
+      <a href="index.html"><img class="logo me-auto" style="width: 50px;" src="svg/logo.svg" alt="logo"></a>
+        <input class="menuBtn" type="checkbox" id="menuBtn" />
+        <label class="menuIcon md-hide" for="menuBtn"><span class="navIcon"></span></label>
+        <ul class="menu">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#location">Directions</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+    </header><!-- /header -->
+
+    <!-- landing -->
+    <section id="landing" class="d-flex flex-column j-c-c a-i-c text-white w-100">
+      <h1 class="py-5">Events</h1>
+    </section><!-- /landing -->
+    </div><!-- /bgDiv -->
+
+    <!-- events -->
+    <section id="events" class="d-flex flex-column j-c-c a-i-c py-2 text-white py-4">
+      <p class="px-2 py-4">Current or upcoming events will be displayed here.</p>
+    </section><!-- /events -->
+
+    <!-- contact -->
+    <section id="contact" class="d-flex flex-column j-c-c a-i-c mb-5">
+      <h2 class="text-white mb-2">Contact</h2>
+      <form action="contactform.php" method="POST">
+        <div class="d-flex px-1 py-05">
+          <input class="me-1" type="text" name="name" class="form-control" placeholder="Your name" aria-label="Full name" required>
+          <input type="email" class="form-control" name="email" placeholder="Your email" required>
+        </div>
+        <div class="d-flex px-1 py-05">
+          <input class="w-100 mt-1" type="subject" class="form-control" name="subject" placeholder="Subject of message" required>
+        </div>
+        <div class="d-flex px-1 py-05">
+          <textarea class="form-control mt-1 w-100" name="message" rows="3" placeholder="Your message" required></textarea>
+        </div>
+      </form>
+    </section><!-- /contact -->
+
+    <!-- footer -->
+    <footer class="d-flex j-c-c a-i-c px-2 py-1 text-white">
+      <div id="location" class="d-flex flex-column j-c-c a-i-s me-auto">
+        <p>Address:</p>
+        <div class="py-05">
+          <small>123 Gotham Street Rd</small><br>
+          <small>Gotham, NY 00000</small>
+        </div>
+        <p>Phone:</p>
+        <small class="py-05">(000) 000-0000</small>
+        <p>Email:</p>
+        <small class="py-05">info@email.com</small>
+      </div>
+      <small>&copy; 2021 Pumpkin Cafe LLC</small>
+    </footer><!-- /footer -->
+
+  </body>
+</html>
