@@ -1,129 +1,112 @@
-header {
-    width: 100%;
-    z-index: 99;
+#header {
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+
+    .logo {
+        width: fit-content;
+    }
 
     a {
         color: white;
-    }
 
-    ul {
-        list-style: none;
-        overflow: hidden;
+        &:hover {
+            color: map.get($theme-colors, 'accent');
 
-        a {
-            display: block;
-            font-size: 1.2rem;
-            padding: 1rem 0;
-
-            @include media-md {
-                font-size: 1rem;
-                padding: 2rem 1rem
-            }
-        }
-        a:hover {
-            color: $secondary-color;
             @include transition-ease
         }
-    }
-
-    li {
-        margin: 1rem;
-
-        @include media-md {
-            margin: .6rem 0;
-            float: left;
-        }
-    }
-
-    .item {
-        @include media-md {
-            margin-right: 1rem;
-        }
-    }
-
-    .button-3 {
-        @include media-md {
-            margin-right: 1rem;
-        }
-    }
-
-    .logo {
-        font-family: "PoppinsExtraBold";
-        display: block;
-        float: left;
-        padding: 1rem 1rem 0;
     }
 
     .menu {
         clear: both;
         max-height: 0;
         transition: max-height .2s ease-out;
+        transform: translate(-150px);
+
+        li {
+            padding: 1.5rem 0;
+
+            @include media-md {
+                padding: 0;
+            }
+        }
 
         @include media-md {
-            clear: none;
-            float: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
             max-height: none;
+            padding: 0;
+            transform: translate(0px);
         }
     }
 
-    .menuIcon {
+    .menu-icon {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         cursor: pointer;
-        float: right;
-        padding: 3rem 1rem;
-        position: relative;
         user-select: none;
 
-        .navIcon {
+        @include media-md {
+            display: none;
+        }
+
+        .nav-icon {
             display: block;
-            width: 18px;
+            width: 20px;
             height: 2px;
             position: relative;
             background: white;
+            border-radius: 5px;
             transition: background .2s ease-out;
         }
-        .navIcon:before,
-        .navIcon:after {
+        .nav-icon:before,
+        .nav-icon:after {
+            content: '';
             display: block;
             width: 100%;
             height: 100%;
             position: absolute;
             background: white;
-            content: '';
+            border-radius: 5px;
             transition: all .2s ease-out;
         }
-        .navIcon:before {
-            top: 5px;
+        .nav-icon:before {
+            top: 6px;
         }
-        .navIcon:after {
-            top: -5px;
+        .nav-icon:after {
+            top: -6px;
         }
     }
-
-    .menuBtn {
+    .menu-btn {
         display: none;
     }
 
-    .menuBtn:checked ~ .menu {
+    .menu-btn:checked ~ .menu {
         max-height: 400px;
-        
-        @include media-smb {
-            padding: 1rem 0;
-            @include transition-ease
+        transform: translate(0px);
+        @include transition-ease;
+
+        @include media-max-md {
+            padding: 2rem 0;
         }
     }
 
-    .menuBtn:checked ~ .menuIcon .navIcon {
+    .menu-btn:checked ~ .menu-icon .nav-icon {
         background-color: transparent;
     }
 
-    .menuBtn:checked ~ .menuIcon .navIcon:before {
+    .menu-btn:checked ~ .menu-icon .nav-icon:before {
         transform: rotate(-45deg);
         top: 0;
     }
 
-    .menuBtn:checked ~ .menuIcon .navIcon:after {
+    .menu-btn:checked ~ .menu-icon .nav-icon:after {
         transform: rotate(45deg);
         top: 0;
     }
 
+}
+section {
+    z-index: map.get($z-indexes, 'default');
 }

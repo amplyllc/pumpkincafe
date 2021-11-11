@@ -1,4 +1,7 @@
+@use "sass:map";
 @import "config";
+@import "mixins";
+@import "variables";
 @import "fonts";
 
 // General Styles
@@ -35,3 +38,4 @@ header {
 @import "nav";
 @import "components";
 @import "oatcake";
+@import "home";

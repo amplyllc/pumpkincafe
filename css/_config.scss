@@ -26,6 +26,9 @@ html {
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 
 // Functions
 @function set-text-color($color) {
